@@ -1,6 +1,11 @@
 *{
     --clock-stroke-color: black;
     --frequency: 1s;
+    --max-clock-size: 40rem;
+}
+svg{
+    max-width: var(--max-clock-size);
+    max-height: var(--max-clock-size);;
 }
 
 .clock circle,
@@ -12,23 +17,4 @@
 .clock text{
     font-family: sans-serif;
     font-size: 0.4rem;
-}
-
-.clock line.minutes{
-    transform-origin: center;
-    animation: rotate-time var(--frequency) linear infinite;
-}
-
-.clock line.hours{
-    transform-origin: center;
-    animation: rotate-time calc(var(--frequency) * 60) linear infinite;
-}
-
-@keyframes rotate-time {
-    0%{
-        transform: rotate(0deg);
-    }
-    100%{
-        transform: rotate(360deg);
-    }
 }
