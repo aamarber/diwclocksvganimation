@@ -1,0 +1,15 @@
+*{
+    --clock-stroke-color: black;
+    --frequency: 1s;
+}
+
+.clock circle,
+.clock line{
+    fill: none;
+    stroke: var(--clock-stroke-color);
+}
+
+.clock text{
+    font-family: sans-serif;
+    font-size: 0.4rem;
+}
